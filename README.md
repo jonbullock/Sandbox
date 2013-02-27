@@ -71,7 +71,7 @@ status=published
 ~~~~~~
 </pre>
 
-The header MUST have at least the status & type fields, the rest are optional.
+The header MUST have at least the **status** & **type** fields, the rest are optional.
 
 You can also add extra meta data to the header:
 
@@ -81,9 +81,7 @@ summary=This is a summary of the larger post
 
 And access it from the template like so:
 
-<code>
-<p>${content.summary}</p>
-</code>
+`<p>${content.summary}</p>`
 
 Drafts ........
 
