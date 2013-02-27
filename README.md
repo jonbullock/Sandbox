@@ -17,8 +17,8 @@ JBake is a Java based static site/blog generator for developers, bake your own w
 
 ## Getting Started
 
-- Get the code and run `mvn package` from the root folder to build an executable JAR file.
-- Run `java -jar <jarfile> <source_folder> <destination_folder>`
+- Get the code and run `mvn package` from the root folder to build an executable JAR file
+- Run `java -jar <jarfile> <source_folder> <destination_folder>` to do some baking
 
 ## Usage
 
@@ -57,8 +57,8 @@ Place your dynamic content in this folder, the content in the files in this fold
 
 The extension of the file determines what content it contains:
 
-.html = raw html
-.md = Markdown
+- .html = raw html
+- .md = Markdown
 
 Each content file needs to have a meta-data header in it:
 
@@ -81,9 +81,9 @@ summary=This is a summary of the larger post
 
 And access it from the template like so:
 
-<pre>
+<code>
 <p>${content.summary}</p>
-</pre>
+</code>
 
 Drafts ........
 
@@ -93,23 +93,23 @@ This is where your [Freemarker](http://freemarker.sourceforge.net) templates go.
 
 Here's whats available to you in what template files:
 
-- Common
+**Common**
 
-<pre>${version}</pre> version of JBake
+`${version}` outputs the version of JBake
 
-The contents of the file is always available via <pre>${content.body}</pre>
+The contents of the file is always available via `${content.body}`
 
-- index.ftl / feed.ftl
+**index.ftl / feed.ftl**
 
-<pre>${posts}</pre> is a collection of content which can be iterated through (this collection only has files which doesn't have type=page, i.e. posts)
+`${posts}` is a collection of content which can be iterated through (this collection only has files which doesn't have type=page, i.e. posts)
 
-- post.ftl / page.ftl
+**post.ftl / page.ftl**
 
-<pre>${content}</pre> is the content of the header & body
+`${content}` is an object that contains the the header & body of the file
 
 You can choose what template your content file will be "mixed" with by changing the *post* header field (i.e. type=post will use post.ftl, type=page will use page.ftl).
 
-Some example templates are included in the /misc/templates/ folder.
+Some example templates are included in the `/misc/templates/` folder.
 
 See the 
 [Freemarker Manual](http://freemarker.sourceforge.net/docs/index.html) for more information on what you can do in Freemarker templates.
@@ -126,14 +126,14 @@ Licensed under the MIT License, see the LICENSE file.
 
 ## Dependencies
 
-Java v1.6 or above
-Apache Maven v2.2 or above
+- Java v1.6 or above
+- Apache Maven v2.2 or above
 
 ## Alternatives
 
-Jekyll
-Awestruct
-Usermesh
+- Jekyll
+- Awestruct
+- Usermesh
 
 ## Contact
 
