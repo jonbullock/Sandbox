@@ -17,10 +17,8 @@ JBake is a Java based static site/blog generator for developers, bake your own w
 
 ## Getting Started
 
-- Get the code and run the following from the root folder to build an executable JAR file:
-	mvn package
-- Run: 
-	java -jar <jarfile> <source_folder> <destination_folder>
+- Get the code and run `mvn package` from the root folder to build an executable JAR file.
+- Run `java -jar <jarfile> <source_folder> <destination_folder>`
 
 ## Usage
 
@@ -59,8 +57,8 @@ Place your dynamic content in this folder, the content in the files in this fold
 
 The extension of the file determines what content it contains:
 
-- .html = raw html
-- .md = Markdown
+.html = raw html
+.md = Markdown
 
 Each content file needs to have a meta-data header in it:
 
@@ -83,9 +81,9 @@ summary=This is a summary of the larger post
 
 And access it from the template like so:
 
-<code>
+<pre>
 <p>${content.summary}</p>
-</code>
+</pre>
 
 Drafts ........
 
@@ -128,14 +126,14 @@ Licensed under the MIT License, see the LICENSE file.
 
 ## Dependencies
 
-- Java v1.6 or above
-- Apache Maven v2.2 or above
+Java v1.6 or above
+Apache Maven v2.2 or above
 
 ## Alternatives
 
-- Jekyll
-- Awestruct
-- Usermesh
+Jekyll
+Awestruct
+Usermesh
 
 ## Contact
 
